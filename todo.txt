@@ -1,0 +1,16 @@
+
+
+mongo "mongodb://rootuser:rootpass@localhost:27017/?authSource=admin"
+mongo "mongodb://apiuser:api1234@localhost:27017/?authSource=admin"
+
+db.createUser( { user: "apiuser", pwd: "api1234", roles: [{ role: "readWrite", db: "admin" }], }
+
+MONGO_URI=mongodb://apiuser:api1234@localhost:27017/animaldb?authSource=admin
+
+MONGO_URI=mongodb://rootuser:rootpass@localhost:27017/animaldb?authSource=admin
+
+MONGO_URI=mongodb://rootuser:rootpass@localhost:27017/?authSource=admin
+
+MONGO_URI=mongodb://rootuser:rootpass@localhost:27017/animaldb
+
+MONGO_URI=mongodb://rootuser:rootpass@localhost:27017/animaldb?retryWrites=true&w=majority
